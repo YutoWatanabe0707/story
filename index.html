@@ -50,6 +50,15 @@
     cone.position.set( 0, 0, -5 );
     scene.add( cone );
     
+    //球
+    var sphereGeometry = new THREE.SphereGeometry( 0.5, 32, 32 ); 
+     //半径、垂直方向の分割数、水平方向の分割数
+     var sphereMaterial = new THREE. MeshPhongMaterial( {color: 0x0000ff,wireframe: true} );
+     var sphere = new THREE.Mesh( sphereGeometry, sphereMaterial );
+     sphere.position.set( 0, 5, -5 );
+     scene.add( sphere );
+
+    
     // 平行光源1
     var directionalLight1 = new THREE.DirectionalLight(0xffffff);
     directionalLight1.position.set(1, 1, 1);
